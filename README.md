@@ -169,6 +169,30 @@ License information will be added when the project licensing model is finalized.
 
 ---
 
+## Third-Party Services & Acknowledgements
+
+SkyTab integrates with and links to third-party astronomy services. These services and their associated software, content, trademarks, and data remain the property of their respective owners and are governed by their own terms and licenses.
+
+### Stellarium Web
+
+SkyTab opens [Stellarium Web](https://stellarium-web.org/) in an Android WebView to provide an interactive sky map.
+
+The Stellarium Web Engine source code is published under the GNU Affero General Public License v3.0 (AGPL-3.0). SkyTab does not claim ownership of Stellarium or its underlying technology.
+
+- Website: https://stellarium-web.org/
+- Engine source: https://github.com/Stellarium/stellarium-web-engine
+- Engine license: https://github.com/Stellarium/stellarium-web-engine/blob/master/LICENSE-AGPL-3.0.txt
+
+### Azmth Space
+
+SkyTab uses astronomy and satellite-tracking pages provided by [Azmth Space](https://azmth.space/).
+
+Azmth Space retains ownership of its services, content, and associated materials. Their applicable terms and attribution requirements continue to apply. Any required Azmth attribution or badge is retained.
+
+### Scope of the SkyTab MIT License
+
+The MIT License in this repository applies only to original SkyTab code and materials owned by the SkyTab author. It does not grant rights to third-party services, software, trademarks, imagery, astronomical datasets, or other externally provided content.
+
 <p align="center">
   <strong>SKYTAB</strong><br/>
   <em>One interface. A universe of possibilities.</em>
