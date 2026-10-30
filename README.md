@@ -187,11 +187,54 @@ The Stellarium Web Engine source code is published under the GNU Affero General 
 
 SkyTab uses astronomy and satellite-tracking pages provided by [Azmth Space](https://azmth.space/).
 
-Azmth Space retains ownership of its services, content, and associated materials. Their applicable terms and attribution requirements continue to apply. Any required Azmth attribution or badge is retained.
+Azmth Space retains ownership of its services, content, and assofciated materials. Their applicable terms and attribution requirements continue to apply. Any required Azmth attribution or badge is retained.
 
 ### Scope of the SkyTab MIT License
 
 The MIT License in this repository applies only to original SkyTab code and materials owned by the SkyTab author. It does not grant rights to third-party services, software, trademarks, imagery, astronomical datasets, or other externally provided content.
+
+## Connecting SkyTab to Your Laptop (Windows)
+
+SkyTab can connect to your Windows laptop through **SkyTab Companion**, allowing you to request laptop Sleep and Shutdown actions directly from your Android device.
+
+### Setup
+
+1. Make sure your Android device and laptop are connected to the same Wi-Fi network.
+2. Download `companion.py` and `requirements.txt` from the [`companion`](./companion) folder in this repository.
+3. Install Python 3.10 or later on your laptop.
+4. Open PowerShell in the folder containing the downloaded files and install the dependency:
+
+   ```powershell
+   python -m pip install -r requirements.txt
+   ```
+
+5. Start SkyTab Companion:
+
+   ```powershell
+   python companion.py
+   ```
+
+6. A six-digit pairing code will appear in the terminal. It is valid for five minutes and can be used once.
+7. Find your laptop's local IPv4 address by running `ipconfig` in PowerShell.
+8. Open SkyTab on your Android device, enter the laptop's IP address and port `8765`, and complete pairing using the displayed code.
+
+### Using the connection
+
+Once paired, you can use SkyTab's available PC controls:
+
+- **Sleep** — requests Windows to enter Sleep mode.
+- **Shutdown** — schedules a Windows shutdown after 30 seconds.
+
+Keep SkyTab Companion running on your laptop while using these controls.
+
+### Notes
+
+- Both devices must remain connected to the same trusted local network.
+- Restarting SkyTab Companion clears paired-device tokens, so you must pair again.
+- Save your work before requesting Sleep or Shutdown.
+- Do not expose the companion's port (`8765`) directly to the public internet.
+
+
 
 <p align="center">
   <strong>SKYTAB</strong><br/>
