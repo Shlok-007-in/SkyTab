@@ -1,0 +1,141 @@
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sky_background"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0.02"
+        android:text="SkyTab"
+        android:textColor="#E5D9FF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/clockText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.08"
+        android:shadowColor="#806FBAFF"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="8"
+        android:text="12:00 AM"
+        android:textColor="#FFFFFF"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/appTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <GridLayout
+        android:id="@+id/actionGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:useDefaultMargins="false"
+        android:layout_marginTop="42dp"
+        app:layout_constraintTop_toBottomOf="@id/clockText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/skyMapButton"
+            android:layout_width="0dp"
+            android:layout_height="104dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="7dp"
+            android:background="@drawable/sky_card"
+            android:text="✧\nSkyMap"
+            android:textAllCaps="false"
+            android:textColor="#F2F7FF"
+            android:textSize="17sp"
+            android:fontFamily="sans-serif-medium"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/satPassButton"
+            android:layout_width="0dp"
+            android:layout_height="104dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="7dp"
+            android:background="@drawable/sky_card"
+            android:text="◌\nSat-Pass"
+            android:textAllCaps="false"
+            android:textColor="#F2F7FF"
+            android:textSize="17sp"
+            android:fontFamily="sans-serif-medium"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/shutDownButton"
+            android:layout_width="0dp"
+            android:layout_height="104dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="7dp"
+            android:background="@drawable/sky_card"
+            android:text="⏻\nShut Down"
+            android:textAllCaps="false"
+            android:textColor="#D8E9FF"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/sleepButton"
+            android:layout_width="0dp"
+            android:layout_height="104dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="7dp"
+            android:background="@drawable/sky_card"
+            android:text="☾\nSleep"
+            android:textAllCaps="false"
+            android:textColor="#D8E9FF"
+            android:textSize="17sp"
+            android:fontFamily="sans-serif-medium"
+            android:stateListAnimator="@null" />
+
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/pcStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="PC status: Not checked"
+        android:textColor="#9CCBFF"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/actionGrid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/testConnectionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test PC Connection"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/pcStatusText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

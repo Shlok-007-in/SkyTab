@@ -1,0 +1,114 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="4dp"
+    android:background="@drawable/sky_background">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="32dp"
+        android:minWidth="0dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="12sp"
+        android:text="← Home" />
+
+    <TextView
+        android:id="@+id/satPassTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAT-PASS"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="6dp" />
+
+    <TextView
+        android:id="@+id/satPassMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose a satellite to track"
+        android:textColor="#B9DFFF"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingBottom="12dp" />
+
+    <LinearLayout
+        android:id="@+id/satelliteList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/issButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ISS — Space Station" />
+
+        <Button
+            android:id="@+id/hubbleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hubble Space Telescope" />
+
+        <Button
+            android:id="@+id/starlinkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Starlink Constellation" />
+
+        <Button
+            android:id="@+id/gpsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GPS Satellites" />
+
+        <Button
+            android:id="@+id/stationsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Space Stations" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/trackerPanel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/chooseAnotherButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="← Choose another satellite" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <WebView
+                android:id="@+id/satPassWebView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/satPassProgress"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>
