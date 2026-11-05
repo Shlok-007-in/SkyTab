@@ -165,7 +165,7 @@ GitHub: [@Shlok-007-in](https://github.com/Shlok-007-in)
 
 ## License
 
-License information will be added when the project licensing model is finalized.
+MIT License
 
 ---
 
